@@ -15,7 +15,7 @@ inquirer
             name: "colors",
             choices: [
                 "black",
-                "red",
+                "purple",
                 "blue",
                 "yellow"
                 
