@@ -14,10 +14,11 @@ inquirer
             message: "What is your favorite color",
             name: "colors",
             choices: [
-                "green",
+                "black",
                 "red",
                 "blue",
                 "yellow"
+                "purple"
             ]
         }
     ]).then(function(data) {
