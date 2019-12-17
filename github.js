@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function generateHtml(data, color) {
-const htmlTemplate = `<!DOCTYPE html>
+    const htmlTemplate = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
 </body>
 </html>`
-return htmlTemplate
+    return htmlTemplate
 }
 
 module.exports = generateHtml;

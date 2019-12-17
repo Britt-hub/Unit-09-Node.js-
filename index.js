@@ -21,38 +21,38 @@ inquirer
                 "purple",
                 "blue",
                 "yellow"
-                
+
             ]
         }
-    ]).then(function(data) {
+    ]).then(function (data) {
         console.log(data.gitHubName)
         console.log(data.colors)
 
 
-        axios.get('https://api.github.com/users/'+ data.gitHubName)
-        .then(function(response){
-            console.log(response.data)
-            console.log(response.data.login)
-            console.log(response.data.followers)
-            console.log(response.data.following)
-            console.log(response.data.repos_url)
-            console.log(response.data.bio)
-            console.log(response.data.location)
-            console.log(response.data.avatar_url)
-            const completedHtml = generateHtml(response.data, data.colors)
-        
-            
-            fs.writeFile('./newPage.html', completedHtml, function(err){
-                if (err) {
-                    console.log(err);
-                }
-            });
+        axios.get('https://api.github.com/users/' + data.gitHubName)
+            .then(function (response) {
+                console.log(response.data)
+                console.log(response.data.login)
+                console.log(response.data.followers)
+                console.log(response.data.following)
+                console.log(response.data.repos_url)
+                console.log(response.data.bio)
+                console.log(response.data.location)
+                console.log(response.data.avatar_url)
+                const completedHtml = generateHtml(response.data, data.colors)
 
-        })
+
+                fs.writeFile('./newPage.html', completedHtml, function (err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+
+            })
 
     });
 
 
 
-    
+
 
