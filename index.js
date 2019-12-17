@@ -18,7 +18,7 @@ inquirer
                 "red",
                 "blue",
                 "yellow"
-                "purple"
+                
             ]
         }
     ]).then(function(data) {
