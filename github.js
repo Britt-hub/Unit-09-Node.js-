@@ -16,7 +16,7 @@ function generateHtml(data, color) {
 
     <div>
         
-                <p>${data.login}</p>
+                <p> text= User Name${data.login}</p>
                 <p>${data.followers}</p>
                 <p>${data.following}</p>
                 <p>${data.repos_url}</p>

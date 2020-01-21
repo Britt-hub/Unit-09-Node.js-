@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const axios = require('axios');
-const generateHtml = require('./github')
+const generateHtml = require('./github');
 const fs = require('fs');
+const pdf = require('html-pdf');
 
 
 inquirer
@@ -46,15 +47,22 @@ inquirer
                     if (err) {
                         console.log(err);
                     }
+                    var html = fs.readFileSync('./newPage.html', 'utf8');
+                    var options = { format: 'Letter' };
+    
+                    pdf.create(html, options).toFile( './newPage.pdf', function (err, res) {
+                        if (err) return console.log(err);
+                        console.log(res);
+                    });
                 });
 
-            })
+            });
+            
+
 
     });
 
 
-// MUST CREATE A LINK TO THE GITHUB PAGE
-// INCLUDES THE PDF RESUME
-// BACKGROUND COLOR MUST BE ADDED
+
 
 
